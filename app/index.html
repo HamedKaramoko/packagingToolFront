@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css" />
+    <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.min.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+      <!--[if lte IE 8]><link rel="stylesheet" href="styles/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="styles/ie9.css" /><![endif]-->
+    <!-- endbuild -->
+  </head>
+  <body ng-app="packagingToolFrontApp" class="homepage">
+      <div id="page-wrapper">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- Header -->
+				<div id="header-wrapper">
+					<div class="container">
+						<!-- Header -->
+							<header id="header">
+								<div class="inner">
+									<!-- Logo -->
+										<h1 id="logo">Packaging tool</h1>
+									<!-- Nav -->
+										<nav id="nav">
+											<ul>
+												<li class="current_page_item"><a ng-href="#/home">Home</a></li>
+												<li><a ng-href="#/packaging">Packaging</a></li>
+                                                <li><a ng-href="#/admin">Admin</a></li>
+                                                <!--<li class="dropdown">
+                                                    <a data-target=""
+					class="dropdown-toggle btn-inverse" data-toggle="dropdown"
+					role="button" aria-expanded="false"><span
+						class="glyphicon glyphicon-user"></span> <span
+						ng-bind-template="{{user.username}} | {{currentGroup}}"> </span><span
+						class="caret"></span> </a>
+					<ul class="dropdown-menu" role="menu">
+						<li ng-click="selected(group)"
+							ng-repeat="group in $root.groups | orderBy: 'group' as filtered_result track by group"><a
+							data-target="" ng-bind="group"></a></li>
+					</ul></li>-->
+											</ul>
+										</nav>
+								</div>
+							</header>
+					</div>
+				</div>
+          <div class="container-fluid">
+              <div class="col-md-2" ng-controller="MenuCtrl" ng-show="$root.showMenu" ng-init="$root.showMenu = false" class="ng-hide">
+                  <!-- Sidebar -->
+       <!-- <section>
+            <header class="major">
+                <h2>Subheading</h2>
+            </header>
+            <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
+            Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
+            Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
+            consequat etiam.</p>
+            <footer>
+                <a href="#" class="button icon fa-info-circle">Find out more</a>
+            </footer>
+        </section>-->
+
+            <section>
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul class="style2">
+                    <li><a href="#">Amet turpis, feugiat et sit amet</a></li>
+                    <li><a ng-href="#/projectConfigurationList">Application Configuration</a></li>
+                </ul>
+                <footer>
+                    <a href="#" class="button icon fa-arrow-circle-o-right">Do Something</a>
+                </footer>
+            </section>
+              </div>
+              <div class="col-md-10">
+                  <div ng-view=""></div>
+              </div>
+          </div>
+
+    <!-- Footer Wrapper -->
+				<div id="footer-wrapper">
+					<footer id="footer" class="container">
+						<div class="row">
+							<div class="12u">
+								<div id="copyright">
+									<ul class="menu">
+										<li>&copy; Untitled 2016. All rights reserved</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/home.js"></script>
+        <script src="scripts/controllers/admin.js"></script>
+        <script src="scripts/controllers/projectconfigurationlist.js"></script>
+        <script src="scripts/controllers/menu.js"></script>
+        <script src="scripts/services/adminservice.js"></script>
+        <!-- endbuild -->
+      </div>
+</body>
+</html>
